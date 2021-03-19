@@ -1,0 +1,42 @@
+* ,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color: rgb(24, 2, 44);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+}
+
+.piano{
+    display:flex;
+
+}
+.key{
+    height:calc(var(--width)*4);
+    width:var(--width);
+}
+.white{
+    --width:95px;
+    background-color: white;
+    border:1px solid #333;
+
+
+}
+.black{
+    --width:60px;
+    background-color:black;
+    margin-left:calc(var(--width)/-2);
+    margin-right:calc(var(--width)/-2);
+    z-index:2;
+    
+
+}
+.white.active{
+    background-color:#CCC;
+}
+.black.active{
+    background-color: #333;
+}
